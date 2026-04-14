@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: 303 100% 25%;
+    --primary-dark: 303 100% 13%;
+    --primary-light: 303 80% 38%;
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
+    --muted: 220 14% 46%;
+    --muted-foreground: 220 14% 46%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 303 100% 25%;
+    --radius: 0.75rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
