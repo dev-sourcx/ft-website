@@ -48,6 +48,8 @@ import StudentRoute from './components/student/StudentRoute';
 import TeacherRoute from './components/teacher/TeacherRoute';
 
 import './App.css';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import AccountDeletion from './pages/AccountDeletion';
 
 function App() {
   return (
@@ -57,7 +59,9 @@ function App() {
           <Routes>
             {/* Public Routes */}
             <Route path="/" element={<Landing />} />
-            
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/account-deletion" element={<AccountDeletion />} />
+
             {/* Auth Routes */}
             <Route path="/auth/role-select" element={<RoleSelect />} />
             <Route path="/auth/student/login" element={<StudentLogin />} />
@@ -128,7 +132,7 @@ function App() {
           </Routes>
 
           {/* Toast Notifications */}
-          <Toaster 
+          <Toaster
             position="top-center"
             toastOptions={{
               duration: 4000,
